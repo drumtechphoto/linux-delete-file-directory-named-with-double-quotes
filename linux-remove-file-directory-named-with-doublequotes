@@ -1,5 +1,11 @@
 ##BACKUP ALL FILES AND FOLDERS BEFORE PROCEEDING and/or TEST ON A SAMPLE FILE/DIRECTORY!!!###
 
+This guide is written on how to permanently delete a file/directory using the linux cli command "rm -r".
+
+I wrote this basic guide because I had Directory on my Unraid OS v. 6.12.6 Share & Cache that was named "Windows 11" and was having difficulty removing the folder. 
+- I obvisouly ensured that the directory was empty / aka did not need it. 
+- Also ensured the entire parent directories were backed up before I proceeded with running the "rm -r" command via cli
+
 Important Note: When dealing with filenames or folder names that contain special characters, including double quotes, you need to escape them properly within deletion commands to avoid unintended consequences.
 
 Warning: Deletion commands like rm and its variants are powerful and irreversible. Ensure you're targeting the correct folder and understand the potential consequences before using them. Always back up important data before proceeding.
@@ -7,7 +13,15 @@ Warning: Deletion commands like rm and its variants are powerful and irreversibl
 Adding Quotes in Deletion Commands:
 
 If the filename or folder name includes double quotes, enclose the entire name in single quotes when providing it to the deletion command. This tells the command to interpret the double quotes literally and not as part of the command syntax.
+
 Example:
+
+First, using the "cd" command to change directories to where the file/directory is located where you want to PERMANENTLY DELETE it.
+examples:
+
+cd /home/test
+cd /mnt/user/test
+cd /mnt/cache/test
 
 To delete a folder named "Windows 11", use the following command:
 rm -r '"Windows 11"'
